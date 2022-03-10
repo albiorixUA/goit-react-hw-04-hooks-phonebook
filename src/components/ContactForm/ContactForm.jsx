@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Form, Label, InputForm, ButtonAdd } from './ContactForm.styled.';
 import { nanoid } from 'nanoid';
 
 class ContactForm extends Component {
@@ -27,9 +28,9 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor={this.nameInputId}>Name</label>
-        <input
+      <Form onSubmit={this.handleSubmit}>
+        <Label htmlFor={this.nameInputId}>Name</Label>
+        <InputForm
           type="text"
           name="name"
           value={this.state.name}
@@ -39,8 +40,8 @@ class ContactForm extends Component {
           id={this.nameInputId}
           required
         />
-        <label htmlFor={this.numberInputId}>Number</label>
-        <input
+        <Label htmlFor={this.numberInputId}>Number</Label>
+        <InputForm
           type="tel"
           name="number"
           value={this.state.number}
@@ -50,8 +51,8 @@ class ContactForm extends Component {
           onChange={this.handleChange}
           required
         />
-        <button type="submit">Add contact</button>
-      </form>
+        <ButtonAdd type="submit">Add contact</ButtonAdd>
+      </Form>
     );
   }
 }

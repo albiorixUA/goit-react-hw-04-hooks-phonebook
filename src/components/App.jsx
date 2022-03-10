@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
-import ContactForm from './ContactForm/ContactForm';
-import Filter from './Filter/Filter';
-import ContactList from './ContactList/ConactList';
+import ContactForm from './ContactForm';
+import Filter from './Filter';
+import ContactList from './ContactList';
 
 class App extends Component {
   state = {
@@ -21,10 +21,7 @@ class App extends Component {
       name: text.name,
       number: text.number,
     };
-
-    this.setState(({ contacts }) => ({
-      contacts: [contact, ...contacts],
-    }));
+    this.setState(({ contacts }) => ({ contacts: [contact, ...contacts] }));
   };
 
   deleteContact = contactId => {

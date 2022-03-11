@@ -8,7 +8,7 @@ export const ItemList = styled.label`
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: black;
+    background-color: ${props => props.theme.colors.black};
     margin-right: 15px;
     margin-left: 30px;
   }
@@ -19,12 +19,12 @@ export const ButtonDelete = styled.button`
   margin-left: 15px;
   border-radius: 4px;
   padding: 5px 10px;
-  background-color: #3f51b5;
-  color: white;
+  background-color: ${props => props.theme.colors.button};
+  color: ${props => props.theme.colors.white};
   font-weight: 500;
 
   &:hover,
   &:focus {
-    background-color: #303f9f;
+    background-color: ${props => props.theme.colors.buttonHover};
   }
 `;

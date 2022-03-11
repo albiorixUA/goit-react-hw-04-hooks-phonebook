@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const Form = styled.form`
   width: 200px;
   padding: 20px 100px 20px 20px;
-  border: 1px solid black;
+  border: ${props => `1px solid ${props.theme.colors.black}`};
   border-radius: 4px;
 `;
 
@@ -20,12 +20,12 @@ export const ButtonAdd = styled.button`
   cursor: pointer;
   border-radius: 4px;
   padding: 5px 10px;
-  background-color: #3f51b5;
-  color: white;
+  background-color: ${props => props.theme.colors.button};
+  color: ${props => props.theme.colors.white};
   font-weight: 500;
 
   &:hover,
   &:focus {
-    background-color: #303f9f;
+    background-color: ${props => props.theme.colors.buttonHover};
   }
 `;
